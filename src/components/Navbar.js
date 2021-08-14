@@ -6,12 +6,12 @@ const Navbar = () => (
     <h1 className="title">Bookstore</h1>
     <ul className="menuNav">
       <li key={1}>
-        <Link to="/" activeClassName="active-link" exact>
+        <Link to="/" active="true" exact="true">
           BOOKS
         </Link>
       </li>
       <li key={2}>
-        <Link to="/categories" activeClassName="active-link" exact>
+        <Link to="/categories" exact="true">
           CATEGORIES
         </Link>
       </li>
