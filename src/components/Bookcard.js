@@ -1,14 +1,14 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBook } from '../redux/api/api';
 
 function Bookcard(props) {
   const dispatch = useDispatch();
   const data = props;
   const { title } = data.data;
   const { author } = data.data;
-  const { id } = data.data;
   const { category } = data.data;
+  const id = data.data.item_id;
 
   const remove = () => {
     dispatch(removeBook(id));

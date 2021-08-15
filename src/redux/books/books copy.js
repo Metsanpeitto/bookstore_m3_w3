@@ -1,6 +1,6 @@
-import {
-  ADD_BOOK, REMOVE_BOOK, FILTER_BOOKS, RECEIVE_BOOKS,
-} from '../constants/action-types';
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const FILTER_BOOKS = 'bookStore/filter/FILTER_BOOKS';
 
 const initialState = { books: [], booksFiltered: [] };
 
@@ -21,10 +21,9 @@ export const filterBooks = (payload) => ({
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_BOOK: {
-      const books = [...state.books, action.payload];
-      return { ...state, books };
-    }
+    case ADD_BOOK:
+    { const books = [...state.books, action.payload];
+      return { ...state, books }; }
     case REMOVE_BOOK: {
       const { books, booksFiltered } = state;
       const newCollection = [];
@@ -38,8 +37,7 @@ const reducer = (state = initialState, action) => {
       return {
         books: [...newCollection],
         booksFiltered,
-      };
-    }
+      }; }
     case FILTER_BOOKS: {
       const { books } = state;
       const newCollection = [];
@@ -51,15 +49,7 @@ const reducer = (state = initialState, action) => {
         });
       }
       return {
-        books,
-        booksFiltered: [...newCollection],
-      };
-    }
-    case RECEIVE_BOOKS: {
-      const { booksFiltered } = state;
-      return {
-        books: action.books,
-        booksFiltered,
+        books, booksFiltered: [...newCollection],
       };
     }
     default:
