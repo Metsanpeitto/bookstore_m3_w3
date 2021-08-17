@@ -10,6 +10,7 @@ function Filter() {
 
   return (
     <select
+      className="filter-category"
       placeholder="Category"
       onChange={filter}
       id="input-category"

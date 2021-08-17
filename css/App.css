@@ -1,0 +1,170 @@
+.btn-1 {
+  width: 11.5rem;
+  height: 2.125rem;
+  border-radius: 3px;
+  border-color: unset;
+  border-style: unset;
+  background-color: #0290ff;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-2 {
+  width: 11.5rem;
+  height: 2.125rem;
+  border-radius: 3px;
+  border-color: unset;
+  border-style: unset;
+  background-color: unset;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: start;
+  color: #0290ff;
+}
+
+.App {
+  text-align: center;
+}
+.App .navBar {
+  display: grid;
+  grid-template-columns: 20% 20% 60%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  min-width: 100%;
+  border-bottom: 2px solid #00000008;
+}
+.App .navBar .title {
+  font-family: "Montserrat-Bold", sans-serif;
+  color: #0290ff;
+}
+.App .navBar .menuNav {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: center;
+  list-style: none;
+}
+.App .navBar .menuNav a {
+  text-decoration: unset;
+  color: #121212;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 0.813rem;
+}
+.App .navBar .menuNav a:nth-child(2) {
+  color: #1e1e1e;
+}
+.App .books {
+  min-height: 90vh;
+  display: grid;
+  grid-template-rows: 48px auto 160px;
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  padding-top: 2.313rem;
+}
+.App .books .books-displayer .bookcard {
+  height: 10.625rem;
+  margin: 2.313rem 6.25rem 0;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding-left: 1.628rem;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+}
+.App .books .books-displayer .bookcard .bookcard-left {
+  text-align: start;
+}
+.App .books .books-displayer .bookcard .bookcard-left .bookcard_genre {
+  margin: unset;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+.App .books .books-displayer .bookcard .bookcard-left .title {
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+  margin: unset;
+}
+.App .books .books-displayer .bookcard .bookcard-left .actions {
+  display: flex;
+  width: 70%;
+}
+.App .books .books-displayer .bookcard .bookcard-center {
+  display: flex;
+}
+.App .books .books-displayer .bookcard .bookcard-center .progress {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  border-image-source: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
+  border-image-slice: 1;
+}
+.App .books .books-displayer .bookcard .bookcard-center .progress .data .progress-number {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+.App .books .books-displayer .bookcard .bookcard-center .progress .data .progress-state {
+  padding: 2rem 7.438rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+.App .books .filter-category {
+  width: 120px;
+  height: 2.125rem;
+}
+.App .books .adder .adder-header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+.App .books .adder .add-form {
+  width: 90%;
+  display: grid;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-template-columns: 40% 20% 20% 20%;
+  grid-column-gap: 2.125rem;
+}
+.App .books .adder .input {
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+  height: 2.125rem;
+  padding-left: 1rem;
+}/*# sourceMappingURL=App.css.map */
