@@ -1,11 +1,16 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { filterBooks } from '../redux/books/books';
+import { useDispatch, useSelector } from 'react-redux';
+import { filterBooks } from '../redux/filter/filter';
 
 function Filter() {
   const dispatch = useDispatch();
+  const { booksReducer } = useSelector((state) => state);
+  const { books } = booksReducer;
+
   const filter = (e) => {
-    dispatch(filterBooks(e.target.value));
+    const { value } = e.target;
+    const data = { value, books };
+    dispatch(filterBooks(data));
   };
 
   return (
@@ -15,9 +20,10 @@ function Filter() {
       id="input-category"
       name="input-category"
     >
-      <option value="science-fiction">Science Fiction</option>
-      <option value="economy">Economy</option>
-      <option value="action">Action</option>
+      <option value="-"> - </option>
+      <option value="Science">Science Fiction</option>
+      <option value="Economy">Economy</option>
+      <option value="Action">Action</option>
     </select>
   );
 }

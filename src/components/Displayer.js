@@ -3,13 +3,14 @@ import { useSelector } from 'react-redux';
 import Bookcard from './Bookcard';
 
 function Displayer() {
-  const { booksReducer } = useSelector((state) => state);
-  const { books, booksFiltered } = booksReducer;
+  const { booksReducer, filterReducer } = useSelector((state) => state);
+  const { books } = booksReducer;
+  const { booksFiltered } = filterReducer;
   const [booksDisplay, setBooksDisplay] = useState(null);
 
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
-    if (booksFiltered.length > 0) {
+    if (booksFiltered) {
       if (booksFiltered !== booksDisplay) {
         setBooksDisplay(booksFiltered);
       }
@@ -21,9 +22,9 @@ function Displayer() {
   if (booksDisplay) {
     return (
       <div className="books-displayer">
-        {booksDisplay.map((b) => (
-          <Bookcard key={b.title} data={b} />
-        ))}
+        {booksDisplay.length > 0
+          ? booksDisplay.map((b) => <Bookcard key={b.title} data={b} />)
+          : null}
       </div>
     );
   }
