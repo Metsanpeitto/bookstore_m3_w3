@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Metsanpeitto/bookstore_m3_w3/static/css/main.de5d8bc8.chunk.css",
+    "main.js": "/Metsanpeitto/bookstore_m3_w3/static/js/main.8f9e2fdb.chunk.js",
+    "main.js.map": "/Metsanpeitto/bookstore_m3_w3/static/js/main.8f9e2fdb.chunk.js.map",
+    "runtime-main.js": "/Metsanpeitto/bookstore_m3_w3/static/js/runtime-main.49f7a173.js",
+    "runtime-main.js.map": "/Metsanpeitto/bookstore_m3_w3/static/js/runtime-main.49f7a173.js.map",
+    "static/js/2.21b28b6d.chunk.js": "/Metsanpeitto/bookstore_m3_w3/static/js/2.21b28b6d.chunk.js",
+    "static/js/2.21b28b6d.chunk.js.map": "/Metsanpeitto/bookstore_m3_w3/static/js/2.21b28b6d.chunk.js.map",
+    "static/js/3.b10e198b.chunk.js": "/Metsanpeitto/bookstore_m3_w3/static/js/3.b10e198b.chunk.js",
+    "static/js/3.b10e198b.chunk.js.map": "/Metsanpeitto/bookstore_m3_w3/static/js/3.b10e198b.chunk.js.map",
+    "index.html": "/Metsanpeitto/bookstore_m3_w3/index.html",
+    "static/css/main.de5d8bc8.chunk.css.map": "/Metsanpeitto/bookstore_m3_w3/static/css/main.de5d8bc8.chunk.css.map",
+    "static/js/2.21b28b6d.chunk.js.LICENSE.txt": "/Metsanpeitto/bookstore_m3_w3/static/js/2.21b28b6d.chunk.js.LICENSE.txt",
+    "static/media/user.84604ed3.svg": "/Metsanpeitto/bookstore_m3_w3/static/media/user.84604ed3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49f7a173.js",
+    "static/js/2.21b28b6d.chunk.js",
+    "static/css/main.de5d8bc8.chunk.css",
+    "static/js/main.8f9e2fdb.chunk.js"
+  ]
+}
