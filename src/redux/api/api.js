@@ -1,5 +1,6 @@
 import library from '../../api/library';
-import { RECEIVE_BOOKS } from '../constants/action-types';
+
+const RECEIVE_BOOKS = 'bookStore/books/RECEIVE_BOOKS';
 
 export const receiveBooks = (books) => ({
   type: RECEIVE_BOOKS,
