@@ -1,8 +1,8 @@
-import {
-  ADD_BOOK, REMOVE_BOOK, FILTER_BOOKS, RECEIVE_BOOKS,
-} from '../constants/action-types';
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const RECEIVE_BOOKS = 'bookStore/books/RECEIVE_BOOKS';
 
-const initialState = { books: [], booksFiltered: [] };
+const initialState = { books: [] };
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
@@ -14,11 +14,6 @@ export const removeBook = (payload) => ({
   payload,
 });
 
-export const filterBooks = (payload) => ({
-  type: FILTER_BOOKS,
-  payload,
-});
-
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK: {
@@ -27,40 +22,18 @@ const reducer = (state = initialState, action) => {
     }
     case REMOVE_BOOK: {
       const { books, booksFiltered } = state;
-      const newCollection = [];
+      let newCollection = [];
       if (books.length > 0) {
-        books.forEach((b) => {
-          if (b.id !== action.payload) {
-            newCollection.push(b);
-          }
-        });
+        newCollection = books.filter((b) => b.id !== action.payload);
       }
       return {
         books: [...newCollection],
         booksFiltered,
       };
     }
-    case FILTER_BOOKS: {
-      const { books } = state;
-      const newCollection = [];
-      if (books.length > 0) {
-        books.forEach((b) => {
-          if (b.category === action.payload) {
-            newCollection.push(b);
-          }
-        });
-      }
-      return {
-        books,
-        booksFiltered: [...newCollection],
-      };
-    }
     case RECEIVE_BOOKS: {
-      const { booksFiltered } = state;
-      return {
-        books: action.books,
-        booksFiltered,
-      };
+      const { books } = action;
+      return { books };
     }
     default:
       return state;

@@ -1,14 +1,22 @@
 import library from '../../api/library';
-import { RECEIVE_BOOKS } from '../constants/action-types';
+
+const RECEIVE_BOOKS = 'bookStore/books/RECEIVE_BOOKS';
+const FILTER_REFRESH = 'bookStore/filter/FILTER_REFRESH';
 
 export const receiveBooks = (books) => ({
   type: RECEIVE_BOOKS,
   books,
 });
 
+export const filterRefresh = (payload) => ({
+  type: FILTER_REFRESH,
+  payload,
+});
+
 export const getBooks = () => (dispatch) => {
   library.getBooks().then((books) => {
     dispatch(receiveBooks(books));
+    dispatch(filterRefresh(books));
     return books;
   });
 };

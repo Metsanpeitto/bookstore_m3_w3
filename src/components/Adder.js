@@ -7,7 +7,7 @@ function Adder() {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('Science fiction');
+  const [category, setCategory] = useState('Science');
 
   const submitBookToStore = () => {
     const newBook = {
@@ -47,9 +47,9 @@ function Adder() {
           id="input-category"
           name="input-category"
         >
-          <option value="science-fiction">Science Fiction</option>
-          <option value="economy">Economy</option>
-          <option value="action">Action</option>
+          <option value="Science">Science Fiction</option>
+          <option value="Economy">Economy</option>
+          <option value="Action">Action</option>
         </select>
         <button className="btn-1" type="submit" onClick={submitBookToStore}>
           ADD BOOK
