@@ -22,9 +22,10 @@ function Adder() {
 
   return (
     <div className="adder">
-      <h2>ADD NEW BOOK</h2>
+      <h2 className="adder-header">ADD NEW BOOK</h2>
       <div className="add-form">
         <input
+          className="adder-title input"
           placeholder="Title"
           onChange={(e) => setTitle(e.target.value)}
           type="text"
@@ -32,6 +33,7 @@ function Adder() {
           id="input-title"
         />
         <input
+          className="adder-author input"
           placeholder="Author"
           onChange={(e) => setAuthor(e.target.value)}
           type="text"
@@ -39,6 +41,7 @@ function Adder() {
           id="input-author"
         />
         <select
+          className="adder-category input"
           placeholder="Category"
           onChange={(e) => setCategory(e.target.value)}
           id="input-category"
@@ -48,7 +51,7 @@ function Adder() {
           <option value="Economy">Economy</option>
           <option value="Action">Action</option>
         </select>
-        <button type="submit" onClick={submitBookToStore}>
+        <button className="btn-1" type="submit" onClick={submitBookToStore}>
           ADD BOOK
         </button>
       </div>

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import user from '../imgs/user.svg';
 
 const Navbar = () => (
   <nav className="navBar">
-    <h1 className="title">Bookstore</h1>
+    <h1 className="title">Bookstore CMS</h1>
     <ul className="menuNav">
       <li key={1}>
         <Link to="/" active="true" exact="true">
@@ -16,6 +17,9 @@ const Navbar = () => (
         </Link>
       </li>
     </ul>
+    <div className="user">
+      <img src={user} className="user-icon" alt="logo" />
+    </div>
   </nav>
 );
 export default Navbar;
